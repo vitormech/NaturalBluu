@@ -165,7 +165,7 @@ nav {
 
 
 .user-actions a i.fa-shopping-cart {
-    color: white; /* Define a cor do ícone como branco */
+    color: black; /* Define a cor do ícone como branco */
     transition: color 0.3s; /* Adiciona uma transição suave */
 }
 
@@ -606,3 +606,44 @@ footer {
     display: block; /* remove espaços extras causados por comportamento inline */
 }
 
+/* Certifique-se de que o carrinho de compras esteja sempre visível */
+.user-actions a {
+    visibility: visible; /* Garante que o ícone esteja sempre visível */
+    opacity: 1; /* Garante que o ícone esteja totalmente opaco */
+    transition: none; /* Remove qualquer transição que dependa do hover */
+}
+
+
+/* Remova qualquer regra que esconda o carrinho fora do hover */
+.user-actions a:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Alteração de cor ao passar o mouse */
+.user-actions a:hover i.fa-heart {
+    color: var(--accent-color); /* Altera a cor ao passar o mouse */
+}
+
+/* Alteração de cor ao passar o mouse no ícone de perfil */
+.user-actions a:hover i.fa-user-circle {
+    color: var(--accent-color); /* Altera a cor ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho do ícone levemente */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
+
+product-added-page {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.product-added-page h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.product-added-page p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
